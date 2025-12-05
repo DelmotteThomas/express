@@ -1,0 +1,25 @@
+<%- include('../../layouts/header.html') %>
+
+  
+        <header class="page-header">
+          <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold"><%= title %></h1>
+              <p class="col-md-8 fs-4"><%= message %></p>
+            </div>
+          </div>
+        </header>
+
+        <div class="page-body">
+          <details class="mt-4">
+            <summary class="h5">Liste de fruits</summary>
+            <ul class="list-group mt-2">
+              <% fruits.forEach(function(fruit) { %>
+              <li class="list-group-item"><%= fruit %></li>
+              <% }); %>
+            </ul>
+          </details>
+        </div>
+        
+
+<%- include('../../layouts/footer.html') %>
