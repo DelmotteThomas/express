@@ -1,0 +1,30 @@
+<%- include('../../layouts/header.html') %>
+
+<header class="page-header">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold text-center"><%= title %></h1>
+      <p class="text-center"><%= message %></p>
+    </div>
+  </div>
+</header>
+
+<div class="page-body">
+  <details class="mt-4">
+    <summary class="h5 text-center">Liste des pokemons</summary>
+   
+    
+    <ul class="list-group">
+      <% pokemons.forEach(p => { %>
+      <li class="list-group-item">
+        <a class="text-decoration-none " href="/pokemon/<%= p.id %>">
+          <img src="<%= p.sprite %>" width="40" />
+          <span class="text-capitalize"><%= p.name %></span>
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+  </details>
+</div>
+
+<%- include('../../layouts/footer.html') %>
