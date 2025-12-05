@@ -1,0 +1,40 @@
+require('dotenv').config();    
+const express = require('express');
+const path = require('path');
+const config = require('./config/config');
+const app = express();
+const port = process.env.PORT || 3000;
+
+
+
+// Configuration du moteur de templates
+// --
+
+// Définir le dossier des templates
+app.set('views', path.join(__dirname, config.views));
+
+// Définir le moteur de templates
+app.set('view engine', config.viewEngine);
+
+// Associer l'extension .html au moteur EJS
+app.engine('html', require('ejs').__express);
+
+// Middleware pour les fichiers statiques
+// --
+
+// Servir les fichiers statiques depuis le dossier "public"
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+// Routes
+// --
+
+app.use('/', require('./config/routes'));
+
+
+// Démarrage du serveur
+// --
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});

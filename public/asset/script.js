@@ -1,0 +1,1 @@
+alert('Bonjours il faut mauvais ce soir, bienvenue en Belgique ');
