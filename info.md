@@ -36,20 +36,19 @@ app.use --> servir les fichier public
 
     (Pour les middleware)
 
-Principe SOLID : MEAN
+Principe SOLID : MEANING
 
 S - Simple Responsability : A class should have only one reason to change, meaning it should have only one job or responsibility.
-
+    Une classe ne devrait avoir qu'une seule et unique raison de changer, ce qui signifie qu'une classe ne devrait avoir qu'une seule fonction.
 O - Open Close  : should be open for extension, but closed for modification.
-
-
+    Les objets ou entités doivent pouvoir être étendus mais ne pas pouvoir être modifiés.
 L -  Liskov Substitution :  Subtypes must be substitutable for their base types without altering the program's correctness.
-
-
+    Soit q(x) une propriété prouvable sur les objets x de type T. Alors q(y) doit être prouvable pour les objets y de type S où S est un sous-type de T.
+    Cela signifie que chaque sous-classe ou classe dérivée doit pouvoir être substituée à sa classe de base ou parente.
 I - Interface Segregation : Clients should not be forced to depend on interfaces they do not use; prefer smaller, focused interfaces
-
-
-D - Dependency Inversion : High-level modules should depend on abstractions, not concrete low-level modules; abstractions shouldn't depend on details, but details on abstractions. 
+    Un client ne devrait jamais être contraint d'implémenter une interface qu'il n'utilise pas, ni de dépendre de méthodes qu'il n'utilise pas.
+D - Dependency Inversion : High-level modules should depend on abstractions, not concrete low-level modules; abstractions shouldn't depend on details, but details on           abstractions. 
+    Les entités doivent dépendre d'abstractions, et non de concrétisations. Cela signifie que le module de haut niveau ne doit pas dépendre du module de bas niveau, mais que ces derniers doivent dépendre d'abstractions.
 
 
 

@@ -41,6 +41,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/bootstrap", express.static("node_modules/bootstrap/dist"));
 
 
+// ou ouvrir separermeent
+// CSS de Bootstrap
+// Source:  node_modules/bootstrap/dist/css/bootstrap.min.css
+// URL:     /vendor/bootstrap/css/bootstrap.min.css
+app.use('/vendor/bootstrap/css', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css')));
+
+// JavaScript de Bootstrap
+// Source:  node_modules/bootstrap/dist/js/bootstrap.min.js
+// URL:     /vendor/bootstrap/js/bootstrap.min.js
+app.use('/vendor/bootstrap/js', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
+
+
+
 // Routes
 // --
 

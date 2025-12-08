@@ -63,4 +63,8 @@ router.post('/pokemon/:id/delete', pokemoncontroller.delete);
 
 // Exporte le router
 
+router.use((req, res) => {
+  res.status(404).render('errors/err_404');
+});
+
 module.exports = router;
