@@ -82,3 +82,7 @@ pour le multilanguage (i18n) / c'est aussi dans le controller qu'on le gere dyna
 
 Lance l'app : Crée le script dans le package 
 Avec nodemode : Ajoute dans script : "NomScriptAuChoix": "nodemon server.js"
+
+Installer b5 : npm install bootstrap
+
+ou importer le CDN dans le header des html

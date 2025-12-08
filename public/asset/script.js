@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 // // alert('Bonjours il faut mauvais ce soir, bienvenue en Belgique ');
 
 // let name =prompt('Entrez votre nom');

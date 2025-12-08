@@ -30,12 +30,15 @@ app.engine('html', require('ejs').__express);
 
 
 
+
 // Middleware pour les fichiers statiques
 // --
 
 // Servir les fichiers statiques depuis le dossier "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Exposer Booststrap depuis node_modules
+app.use("/bootstrap", express.static("node_modules/bootstrap/dist"));
 
 
 // Routes
